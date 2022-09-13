@@ -42,10 +42,23 @@ color: wheat;
 .todo{
     background-image: url(https://thumbs.dreamstime.com/b/cyan-wall-texture-background-cyan-wall-texture-background-used-materials-game-engine-interior-design-138784969.jpg);
     margin-top: 2rem;
-     font-family: 'Neucha', cursive;
+     font-family: 'Electrolize', sans-serif;
 }
 .altdiv{
     padding: 0.4rem;
     display: flex;
     justify-content: space-between;
+}
+.remove1{
+    border: none;
+    border-radius: 0.5rem;
+    background-color:rgb(10, 61, 82) ;
+    padding: 0.2rem;
+    color: aqua;
+}
+.altdiv p{
+    width: 15rem;
+    word-wrap: break-word;
+    font-weight: 900;
+
 }

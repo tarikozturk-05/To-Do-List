@@ -32,12 +32,39 @@ let year = new Date().getFullYear();
 //   }
 // })
 
+
+// **********addBtn**********
 btn.addEventListener("click",()=>{
 
 if(!input.value){
     alert("birşey gir")
 }else{
- todo.innerHTML += `<div class="altdiv" id="altdiv"><input type="checkbox"><p>${input.value}</p><div class="günler">${day}.${month}.${year}  <button>${remove}</button></div></div>`;
+ todo.innerHTML += `<div class="altdiv" id="altdiv"><input class="box" type="checkbox"><p class="par">${input.value}</p><div class="günler">${day}.${month}.${year}  <button class="remove1">remove</button></div></div>`;
 
 }input.value=""
 })
+
+// *********enter*****
+
+input.addEventListener("keydown", (e)=>{
+if(e.key === 'Enter'){
+    btn.click();}
+})
+
+// *************remove*****
+
+todo.addEventListener("click",(e)=>{
+if(e.target.classList.contains("remove1")){e.target.parentElement.parentElement.remove();}
+})
+
+todo.addEventListener("click", (e) => {
+  if (e.target.classList.contains("box")) {
+    e.target.nextElementSibling.style.textDecoration= "line-through";
+    
+  }
+});
+
+
+
+
+
